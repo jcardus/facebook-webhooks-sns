@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@aws-sdk/client-dynamodb": "^3.188.0",
+        "@aws-sdk/client-sns": "^3.303.0",
         "@aws-sdk/lib-dynamodb": "^3.188.0"
     },
     "devDependencies": {
@@ -24,6 +25,9 @@
             "**/?(*.)+(spec|test).[jt]s?(x)",
             "**/__tests__/**/*.mjs?(x)",
             "**/?(*.)+(spec|test).mjs?(x)"
+        ],
+        "modulePathIgnorePatterns": [
+            ".aws-sam"
         ],
         "moduleFileExtensions": [
             "mjs",

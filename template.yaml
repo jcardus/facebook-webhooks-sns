@@ -1,12 +1,12 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  sam-facebook-webhooks
+  facebook-webhooks-sns
 
 Transform:
 - AWS::Serverless-2016-10-31
 
 Resources:
-  createSubscription:
+  doGet:
     Type: AWS::Serverless::Function
     Properties:
       Handler: src/handlers/index.get
@@ -15,11 +15,26 @@ Resources:
         - x86_64
       MemorySize: 128
       Events:
-        Api:
+        Get:
           Type: Api
           Properties:
             Path: /
             Method: GET
+  doPost:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/index.post
+      Runtime: nodejs18.x
+      Architectures:
+        - x86_64
+      MemorySize: 128
+      Events:
+        Get:
+          Type: Api
+          Properties:
+            Path: /
+            Method: POST
+
 
 Outputs:
   WebEndpoint:
