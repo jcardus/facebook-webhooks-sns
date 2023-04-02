@@ -1,0 +1,7 @@
+{
+    "httpMethod": "GET",
+    "queryStringParameters": {
+        "hub.mode": "subscribe",
+        "hub.verify_token": "meatyhamhock"
+    }
+}
