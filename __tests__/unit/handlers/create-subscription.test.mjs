@@ -1,4 +1,4 @@
-import { createSubscription } from '../../../src/handlers/create-subscription.mjs';
+import { createSubscription } from '../../../src/handlers/index.mjs';
 import event from '../../../events/create-subscription.json'
 
 describe('Test createSubscription', function () {

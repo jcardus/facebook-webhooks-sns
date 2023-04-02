@@ -9,7 +9,7 @@ Resources:
   createSubscription:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/handlers/create-subscription
+      Handler: src/handlers/index.createSubscription
       Runtime: nodejs18.x
       Architectures:
         - x86_64
