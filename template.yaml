@@ -9,7 +9,7 @@ Resources:
   createSubscription:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: src/handlers/index.createSubscription
+      Handler: src/handlers/index.get
       Runtime: nodejs18.x
       Architectures:
         - x86_64
@@ -18,7 +18,7 @@ Resources:
         Api:
           Type: Api
           Properties:
-            Path: /verify
+            Path: /
             Method: GET
 
 Outputs:

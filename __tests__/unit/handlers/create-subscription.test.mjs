@@ -1,4 +1,4 @@
-import { createSubscription } from '../../../src/handlers/index.mjs';
+import { get } from '../../../src/handlers/index.mjs';
 import event from '../../../events/create-subscription.json'
 
 describe('Test createSubscription', function () {
@@ -6,7 +6,7 @@ describe('Test createSubscription', function () {
         const challenge = '1158201444'
         event.queryStringParameters['hub.challenge'] = challenge
         // Invoke putItemHandler()
-        const result = await createSubscription(event);
+        const result = await get(event);
 
         const expectedResult = {
             statusCode: 200,

@@ -3,9 +3,9 @@
  * A simple example includes a HTTP post method to add one item to a DynamoDB table.
  */
 
-export const createSubscription = async (event) => {
+export const get = async (event) => {
     if (event.httpMethod !== 'GET') {
-        throw new Error(`createSubscription only accepts GET method, you tried: ${event.httpMethod} method.`);
+        throw new Error(`this only accepts GET method, you tried: ${event.httpMethod} method.`);
     }
     // All log statements are written to CloudWatch
     console.info('received:', event);
