@@ -2,7 +2,7 @@
 
 An aws serverless application that forwards facebook webhooks to an sns topic.
 
-Each facebook webhook field will be mapped to a sns topic using aws system manager parameter store.
+Each facebook webhook field will be mapped to an sns topic.
 Example:
 
 ## Deploy

@@ -30,7 +30,5 @@ export const post = async (event) => {
             }))
         }
     }
-    const response = { statusCode: 200 }
-    console.info(`response from: ${event.path} statusCode: ${response.statusCode} body: ${response.body}`)
-    return response
+    return { statusCode: 200 }
 }
