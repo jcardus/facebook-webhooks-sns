@@ -17,10 +17,7 @@ describe('Test webhooks', function () {
 
     test('leadgen', async () => {
         const result = await post(leadgen);
-
-        const expectedResult = {
-            statusCode: 200
-        };
+        const expectedResult = { statusCode: 200 }
         expect(result).toEqual(expectedResult);
     });
 });

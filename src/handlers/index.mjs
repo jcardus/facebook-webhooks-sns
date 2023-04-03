@@ -1,5 +1,5 @@
 import {PublishCommand, SNSClient} from "@aws-sdk/client-sns";
-const region = process.env.AWS_REGION
+const region = process.env.AWS_REGION || 'eu-west-3'
 const snsClient = new SNSClient({ region });
 
 export const get = async (event) => {

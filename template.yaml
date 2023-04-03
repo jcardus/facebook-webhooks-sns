@@ -5,7 +5,15 @@ Description: >-
 Transform:
 - AWS::Serverless-2016-10-31
 
+Globals:
+  Function:
+    Environment:
+      Variables:
+        TOPIC_LEADGEN: !Ref TopicLeadgen
+
 Resources:
+  TopicLeadgen:
+    Type: AWS::SNS::Topic
   doGet:
     Type: AWS::Serverless::Function
     Properties:
@@ -34,7 +42,9 @@ Resources:
           Properties:
             Path: /
             Method: POST
-
+      Policies:
+        - SNSPublishMessagePolicy:
+            TopicName: !GetAtt TopicLeadgen.TopicName
 
 Outputs:
   WebEndpoint:
